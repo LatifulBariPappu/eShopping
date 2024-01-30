@@ -1,8 +1,10 @@
-package com.example.eshopping;
+package com.example.eshopping.activities.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.eshopping.R;
 
 public class MainActivity extends AppCompatActivity {
 

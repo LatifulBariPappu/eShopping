@@ -13,10 +13,10 @@
         android:theme="@style/Theme.EShopping"
         tools:targetApi="31">
         <activity
-            android:name=".ProductDetailActivity"
+            android:name=".activities.activities.ProductDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
