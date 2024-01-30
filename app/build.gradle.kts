@@ -6,6 +6,10 @@ android {
     namespace = "com.example.eshopping"
     compileSdk = 34
 
+    buildFeatures{
+        viewBinding=true
+    }
+
     defaultConfig {
         applicationId = "com.example.eshopping"
         minSdk = 24
