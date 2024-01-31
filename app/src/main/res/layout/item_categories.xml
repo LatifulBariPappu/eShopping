@@ -5,12 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ImageView
+    <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/image"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:layout_marginTop="8dp"
-        android:src="@tools:sample/avatars"
+        android:src="@drawable/placeholder"
+        app:riv_oval="true"
+        android:scaleType="centerCrop"
+        android:background="#4659D6"
+        android:padding="5dp"
+        app:riv_mutate_background="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
