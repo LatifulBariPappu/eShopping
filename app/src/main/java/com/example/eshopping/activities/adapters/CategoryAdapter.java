@@ -2,6 +2,7 @@ package com.example.eshopping.activities.adapters;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +35,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
     @Override
     public void onBindViewHolder(@NonNull CategoryViewHolder holder, int position) {
         Category category=categories.get(position);
-        holder.binding.lebel.setText(category.getName());
+        holder.binding.label.setText(Html.fromHtml(category.getName()));
         Glide.with(context)
                 .load(category.getIcon())
                 .into(holder.binding.image);
@@ -47,7 +48,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         return categories.size();
     }
 
-    public class CategoryViewHolder extends RecyclerView.ViewHolder{
+    public static class CategoryViewHolder extends RecyclerView.ViewHolder{
 
         ItemCategoriesBinding binding;
         public CategoryViewHolder(@NonNull View itemView) {

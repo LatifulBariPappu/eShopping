@@ -44,6 +44,15 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    /*loadingImages*/
     implementation ("com.github.bumptech.glide:glide:4.16.0")
+    /*rounded image view*/
     implementation("com.makeramen:roundedimageview:2.3.0")
+    /*searchBar*/
+    implementation("com.github.mancj:MaterialSearchBar:0.8.5")
+    /*for slider*/
+    implementation ("com.google.android.material:material:1.11.0")
+    implementation ("me.relex:circleindicator:2.1.6")
+    implementation ("org.imaginativeworld.whynotimagecarousel:whynotimagecarousel:2.1.0")
+    implementation ("com.android.volley:volley:1.2.1")
 }
