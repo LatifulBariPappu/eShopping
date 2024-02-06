@@ -3,6 +3,12 @@
     <style name="Base.Theme.EShopping" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/orange</item>
         <item name="colorPrimaryVariant">@color/orange</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+    </style>
+    <style name="Base.Theme.EShopping.ActionBar" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/orange</item>
+        <item name="colorPrimaryVariant">@color/orange</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
     </style>
     <style name="Theme.EShopping" parent="Base.Theme.EShopping" />
 </resources>

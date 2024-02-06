@@ -67,53 +67,13 @@ public class MainActivity extends AppCompatActivity {
         categories.add(new Category("Sports & Outdoor","https://cdn-icons-png.flaticon.com/512/856/856614.png","#FFA549","Some description",8));
         categoryAdapter=new CategoryAdapter(this,categories);
 
-        getCategories();
 
         GridLayoutManager layoutManager=new GridLayoutManager(this,4);
         binding.categoriesList.setLayoutManager(layoutManager);
         binding.categoriesList.setAdapter(categoryAdapter);
 
     }
-    void getCategories(){
-        RequestQueue queue= Volley.newRequestQueue(this);
-        StringRequest request=new StringRequest(Request.Method.GET, Constants.GET_CATEGORIES_URL, new Response.Listener<String>() {
 
-            @Override
-            public void onResponse(String response) {
-                try {
-                    Log.e("err",response);
-                    JSONObject mainObj=new JSONObject(response);
-                    if(mainObj.getString("status").equals("success")){
-                        JSONArray categoriesArray=mainObj.getJSONArray("categories");
-                        for(int i=0;i<categoriesArray.length();i++){
-                            JSONObject object=categoriesArray.getJSONObject(i);
-                            Category category=new Category(
-                                    object.getString("name"),
-                                    Constants.CATEGORIES_IMAGE_URL + object.getString("icon"),
-                                    object.getString("color"),
-                                    object.getString("brief"),
-                                    object.getInt("id")
-                            );
-                            categories.add(category);
-
-                        }
-                        categoryAdapter.notifyDataSetChanged();
-                    }else{
-                        //Do nothing
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-
-            }
-        });
-        queue.add(request);
-
-    }
     void initProducts(){
         products=new ArrayList<>();
 
