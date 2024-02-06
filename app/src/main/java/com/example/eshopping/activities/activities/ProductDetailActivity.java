@@ -16,6 +16,7 @@ import com.example.eshopping.databinding.ActivityProductDetailBinding;
 public class ProductDetailActivity extends AppCompatActivity {
     ActivityProductDetailBinding binding;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

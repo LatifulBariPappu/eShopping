@@ -39,7 +39,7 @@
                 android:text="TextView" />
 
             <TextView
-                android:id="@+id/price"
+                android:id="@+id/pricecart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
